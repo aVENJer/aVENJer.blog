@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* 
+   Author: Johnathon Ventiere
+   Date: 08/31/2025
+   Filename: styles.css
+*/
+
+/* === Base Page Styles === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, nav, main, footer {
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+/* Blog layout */
+#blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+article {
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: all 0.3s;
+}
+
+/* Contact form layout */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+#contact input, #contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+/* Phone (max-width: 767px) */
+@media (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  #blog {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tablet (768px–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #blog {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Desktop (1025px and up) */
+@media (min-width: 1025px) {
+  #blog {
+    flex-direction: row;
+  }
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Navigation hover effect */
+nav ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Form transitions on focus or hover */
+#contact input:hover,
+#contact textarea:hover,
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #007BFF;
+  background-color: #f0f8ff;
+}
