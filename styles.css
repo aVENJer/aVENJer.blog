@@ -6,7 +6,6 @@
    Filename: styles.css
 */
 
-/* === Base Page Styles === */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,7 +13,7 @@ body {
   line-height: 1.6;
   background-color: black;
   color: lightgrey;
-  animation: fadeIn 1s ease-in; /*apples fadeIn animation*/
+  animation: fadeIn 1s ease-in; /*applies fadeIn animation*/
 }
 
 header, nav, main, footer {
@@ -47,7 +46,6 @@ nav ul li a {
   color: white;
 }
 
-/* Blog layout */
 #blog {
   display: flex;
   flex-wrap: wrap; 
@@ -72,7 +70,7 @@ footer {
     padding: 15px;
     border-top: 2px solid darkslateblue;
 }
-/* Contact form layout */
+
 #contact form {
   display: flex;
   flex-direction: column;
@@ -153,7 +151,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Phone (max-width: 767px) */
 @media (max-width: 767px) {
   nav ul {
     flex-direction: column; /*stacks nav items vertically to accomodate phones*/
@@ -165,7 +162,6 @@ textarea:focus {
   }
 }
 
-/* Tablet (768px–1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   #blog {
     flex-direction: row;
@@ -173,25 +169,22 @@ textarea:focus {
   }
 }
 
-/* Desktop (1025px and up) */
 @media (min-width: 1025px) {
   #blog {
     flex-direction: row;
   }
 }
-/* Fade-in animation */
-@keyframes fadeIn {
+
+@keyframes fadeIn {   /*adds a fadeIn animation*/
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Navigation hover effect */
-nav ul li a:hover {
+nav ul li a:hover { /*creates a hover effect*/
   background-color: darkslateblue;
   color: white;
 }
 
-/* Form transitions on focus or hover */
 #contact input:hover,
 #contact textarea:hover,
 #contact input:focus,
