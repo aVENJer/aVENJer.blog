@@ -12,6 +12,9 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background-color: black;
+  color: lightgrey;
+  animation: fadeIn 1s ease-in;
 }
 
 header, nav, main, footer {
@@ -19,11 +22,18 @@ header, nav, main, footer {
   text-align: center;
 }
 
+header {
+    background-color: dimgrey;
+    color: darkred;
+    border-bottom: 2px solid midnightblue;
+}
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 0;
+  justify-content: center;
+  background-color: black;
 }
 
 nav ul li {
@@ -33,7 +43,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   padding: 8px 12px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
 }
 
 /* Blog layout */
@@ -47,12 +58,20 @@ nav ul li a {
 
 article {
   flex: 1 1 300px;
-  border: 1px solid #ccc;
+  border: 1px solid midnightblue;
   padding: 15px;
-  background-color: #f9f9f9;
+  margin: 20px;
+  background-color: dimgrey;
   transition: all 0.3s;
 }
 
+footer {
+    background-color: black;
+    color: grey;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid darkslateblue;
+}
 /* Contact form layout */
 #contact form {
   display: flex;
@@ -60,13 +79,88 @@ article {
   max-width: 600px;
   margin: 0 auto;
   gap: 15px;
+  background-color: dimgrey;
+  border: 1px solid darkred;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: purple;
 }
 
 #contact input, #contact textarea {
   padding: 10px;
-  border: 1px solid #ccc;
+  background-color: black;
+  color: white;
+  border: 1px solid darkslateblue;
   transition: border-color 0.3s, background-color 0.3s;
 }
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: dimgrey;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  flex-direction: column;
+}
+
+label {
+  width: 100px;
+  margin-right: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.form-field {
+   display: flex;
+   flex-direction: column;
+}
+
+input,
+textarea {
+  width: 100%;             
+  max-width: 700px;        
+  margin: 0 auto;          
+  display: block;          
+  padding: 12px;
+  border: 1px solid darkslateblue;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  border-radius: 3px;
+  transition: border-color 0.3s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: crimson;
+  outline: none;
+}
+
 /* Phone (max-width: 767px) */
 @media (max-width: 767px) {
   nav ul {
@@ -99,13 +193,10 @@ article {
   to { opacity: 1; }
 }
 
-body {
-  animation: fadeIn 1s ease-in;
-}
-
 /* Navigation hover effect */
 nav ul li a:hover {
-  background-color: #ddd;
+  background-color: darkslateblue;
+  color: white;
 }
 
 /* Form transitions on focus or hover */
@@ -113,6 +204,6 @@ nav ul li a:hover {
 #contact textarea:hover,
 #contact input:focus,
 #contact textarea:focus {
-  border-color: #007BFF;
-  background-color: #f0f8ff;
+  border-color: crimson;
+  background-color: darkslateblue;
 }
