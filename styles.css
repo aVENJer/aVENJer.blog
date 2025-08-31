@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
   background-color: black;
   color: lightgrey;
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 1s ease-in; /*apples fadeIn animation*/
 }
 
 header, nav, main, footer {
@@ -30,7 +30,7 @@ header {
 nav ul {
   display: flex;
   justify-content: center;
-  list-style: none;
+  list-style: none; /*removes bullets*/
   padding: 0;
   justify-content: center;
   background-color: black;
@@ -50,7 +50,7 @@ nav ul li a {
 /* Blog layout */
 #blog {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   gap: 20px;
   justify-content: center;
   padding: 20px;
@@ -82,6 +82,8 @@ footer {
   background-color: dimgrey;
   border: 1px solid darkred;
   color: white;
+  align-items: center;
+  padding: 20px;
 }
 
 button {
@@ -94,7 +96,7 @@ button {
 }
 
 button:hover {
-    background-color: purple;
+    background-color: purple; /*adds a purple hover color over the button*/
 }
 
 #contact input, #contact textarea {
@@ -103,16 +105,6 @@ button:hover {
   color: white;
   border: 1px solid darkslateblue;
   transition: border-color 0.3s, background-color 0.3s;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: dimgrey;
-  padding: 20px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .form-row {
@@ -164,11 +156,11 @@ textarea:focus {
 /* Phone (max-width: 767px) */
 @media (max-width: 767px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: column; /*stacks nav items vertically to accomodate phones*/
   }
 
   #blog {
-    flex-direction: column;
+    flex-direction: column; /*stacks articles vertically*/
     align-items: center;
   }
 }
